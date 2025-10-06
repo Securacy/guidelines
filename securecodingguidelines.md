@@ -1,6 +1,6 @@
 # Secure Coding Guidelines
 This md file outlines secure coding practices across nine critical areas: Input Validation &
-  Sanitization, Authentication &Authorization, Data Protection, Error Handling & Logging, Database  Security, API Security, Working with AI Assistants securely, Code Quality
+  Sanitization, Authentication &Authorization, Data Protection, Error Handling & Logging, Database  Security, API Security, Working with Cloud Storage Security, Working with AI Assistants securely, Code Quality
   & Dependencies, Infrastructure Security, and Development Practices.
 
 ## Input Validation & Sanitization
@@ -71,6 +71,23 @@ This md file outlines secure coding practices across nine critical areas: Input 
 - Validate content types and enforce proper CORS policies
 - Implement API versioning and deprecation strategies
 - Use OAuth 2.0 or similar standards for API authentication
+
+## Working with Cloud Storage Security
+- Configure proper IAM policies with least privilege access for AWS S3 and Azure Blob Storage
+- Enable encryption at rest and in transit for all storage buckets and containers
+- Use signed URLs or SAS tokens with appropriate expiration times for temporary access
+- Never expose storage access keys or connection strings in client-side code
+- Implement proper bucket policies to prevent unauthorized public access
+- Enable versioning and MFA delete protection for critical storage containers
+- Use VPC endpoints or private endpoints to avoid internet traffic for storage access
+- Implement proper CORS policies for web applications accessing storage
+- Monitor and log all storage access activities for security auditing
+- Regularly rotate storage access keys and update applications accordingly
+- Use storage-specific security features like AWS S3 Block Public Access or Azure Blob Storage access tiers
+- Validate file types and scan uploads for malware before storing
+- Implement proper backup and disaster recovery for storage data
+- Use customer-managed encryption keys when handling sensitive data
+- Configure lifecycle policies to automatically manage data retention and deletion
 
 ## Working with AI Assistants securely
 - Never include sensitive data, passwords, apikey in prompts, azure blob urls, DB credentials etc to AI agents for producing code

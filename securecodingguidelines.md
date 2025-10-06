@@ -1,5 +1,7 @@
 # Secure Coding Guidelines
-This file details general coding practices across 9 areas which is Input Validation, Authentication and Authorization, Data protection, Error Handling, Database security, API Security, working with AI assistants securely,  Code Quality & Dependencies, Infrastructure Security and Development Practices.
+This md file outlines secure coding practices across nine critical areas: Input Validation &
+  Sanitization, Authentication &Authorization, Data Protection, Error Handling & Logging, Database  Security, API Security, Working with AI Assistants securely, Code Quality
+  & Dependencies, Infrastructure Security, and Development Practices.
 
 ## Input Validation & Sanitization
 - Identify all data sources and classify them into trusted and untrusted
@@ -12,7 +14,6 @@ This file details general coding practices across 9 areas which is Input Validat
 - Implement proper length limits and data type validation
 - Never trust client-side validation alone
 - All validation failures should result in input rejection
-- 
 
 ## Authentication & Authorization
 - Require authentication for all pages and resources, except those specifically intended to be public

@@ -108,7 +108,7 @@ This md file outlines secure coding practices across nine critical areas: Input 
 ## Code Quality & Dependencies
 - Keep dependencies updated and scan for known vulnerabilities
 - Implement secure code review processes
-- If on github do not allow merge to main with a pull request review
+- If on github do not allow merge to main without a pull request review
 - Use static analysis security testing (SAST) tools
 - Follow secure coding standards for your language/framework
 - Implement proper exception handling without information leakage
@@ -119,6 +119,17 @@ This md file outlines secure coding practices across nine critical areas: Input 
 - Regular security patching of operating systems and services
 - Use containerization with minimal base images
 - Implement proper backup and disaster recovery procedures
+- Use official or verified base images from trusted registries for Docker containers
+- Scan container images for vulnerabilities before deployment using tools like Docker Scout or Trivy
+- Run containers as non-root users whenever possible
+- Implement resource limits (CPU, memory) to prevent container resource exhaustion
+- Use Docker secrets management instead of environment variables for sensitive data
+- Enable Docker Content Trust to verify image integrity and authenticity
+- Regularly update base images and rebuild containers to include security patches
+- Use multi-stage builds to minimize final image size and attack surface
+- Implement proper network segmentation between containers using Docker networks
+- Enable Docker daemon logging and monitor container activities
+- Use read-only filesystems for containers when possible
 
 ## Development Practices
 - Conduct threat modeling for new features and systems

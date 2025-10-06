@@ -126,3 +126,9 @@ This md file outlines secure coding practices across nine critical areas: Input 
 - Use separate environments for development, testing, and production
 - Implement security testing in CI/CD pipelines such SAST, SCA, DAST
 - Regular security training for development team
+
+
+### References
+- OWASP https://github.com/OWASP/www-project-secure-coding-practices-quick-reference-guide/blob/main/stable-en/02-checklist/05-checklist.md
+- OWASP https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/assets/docs/OWASP_SCP_Quick_Reference_Guide_v21.pdf
+
